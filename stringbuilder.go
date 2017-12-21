@@ -32,6 +32,12 @@ func (s *StringBuilder) AppendLine(str string) *StringBuilder {
 	return s.Append(str).Br()
 }
 
+// Appends a single character to the builder
+func (s *StringBuilder) AppendRune(char rune) *StringBuilder {
+	s.buffer.WriteRune(char)
+	return s
+}
+
 // Breaks to the next line
 func (s *StringBuilder) Br() *StringBuilder {
 	return s.Append(LINE_BREAK)

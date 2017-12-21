@@ -1,7 +1,7 @@
 # go-strings
 String utilities for go
 
-#### String Builder
+### String Builder
 
 The string builder allows to easily build strings using a byte.buffer underneath.
 
@@ -33,7 +33,7 @@ some text something else
 End
 ```
 
-#### Conversion methods
+### Conversion methods
 
 - **CamelToSnake**: Converts CamelCase to snake_case
 - **SnakeToCamel**: Converts snake_case to CamelCase
