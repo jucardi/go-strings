@@ -1,8 +1,10 @@
 package stringx
 
 import (
-	"github.com/stretchr/testify/assert"
+	"fmt"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
 func TestStringBuilder_Append(t *testing.T) {
@@ -12,7 +14,7 @@ func TestStringBuilder_Append(t *testing.T) {
 
 func TestStringBuilder_AppendLine(t *testing.T) {
 	result := Builder().AppendLine("some").AppendLine("thing").Build()
-	assert.Equal(t, "some\nthing\n", result, "Builder result mismatch")
+	assert.Equal(t, fmt.Sprintf("some%sthing%s", LineBreak, LineBreak), result, "Builder result mismatch")
 }
 
 func TestStringBuilder_Br(t *testing.T) {
