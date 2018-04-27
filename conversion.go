@@ -7,22 +7,22 @@ import (
 
 var camel = regexp.MustCompile("(^[^A-Z]*|[A-Z]*)([A-Z][^A-Z]+|$)")
 
-// Converts CamelCase to snake_case.
+// CamelToSnake converts CamelCase to snake_case.
 func CamelToSnake(s string) string {
 	return camelToSymbolSeparated(s, "_")
 }
 
-// Converts snake_case to CamelCase
+// SnakeToCamel converts snake_case to CamelCase
 func SnakeToCamel(s string) string {
 	return symbolSeparatedToCamel(s, "_")
 }
 
-// Converts CamelCase to dash-separated-string
+// CamelToDash converts CamelCase to dash-separated-string
 func CamelToDash(s string) string {
 	return camelToSymbolSeparated(s, "-")
 }
 
-// Converts a dash-separated-string to CamelCase
+// DashToCamel converts a dash-separated-string to CamelCase
 func DashToCamel(s string) string {
 	return symbolSeparatedToCamel(s, "-")
 }
