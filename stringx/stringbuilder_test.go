@@ -12,6 +12,11 @@ func TestStringBuilder_Append(t *testing.T) {
 	assert.Equal(t, "something", result, "Builder result mismatch")
 }
 
+func TestStringBuilder_Appendf(t *testing.T) {
+	result := Builder().AppendObj("some").Appendf("thing").Build()
+	assert.Equal(t, "something", result, "Builder result mismatch")
+}
+
 func TestStringBuilder_AppendLine(t *testing.T) {
 	result := Builder().AppendLine("some").AppendLine("thing").Build()
 	assert.Equal(t, fmt.Sprintf("some%sthing%s", LineBreak, LineBreak), result, "Builder result mismatch")

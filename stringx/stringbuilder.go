@@ -32,7 +32,7 @@ func (s *StringBuilder) Appendf(format string, args ...interface{}) *StringBuild
 // AppendObj attempts to obtain a string representation of the interface{} (s) and appends it/them to the builder
 func (s *StringBuilder) AppendObj(objs ...interface{}) *StringBuilder {
 	for _, v := range objs {
-		s.Append(fmt.Sprintf("%v", v))
+		s.Append(fmt.Sprintf("%+v", v))
 	}
 	return s
 }
