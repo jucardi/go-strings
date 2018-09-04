@@ -64,6 +64,42 @@ func (s String) ToTitleSpecial(c unicode.SpecialCase) String {
 	return New(strings.ToTitleSpecial(c, s.current))
 }
 
+// Trim returns a slice of the string s with all leading and
+// trailing Unicode code points contained in cutset removed.
+func (s String) Trim(cutset string) String {
+	return New(strings.Trim(s.current, cutset))
+}
+
+// TrimLeft returns a slice of the string s with all leading
+// Unicode code points contained in cutset removed.
+func (s String) TrimLeft(cutset string) String {
+	return New(strings.TrimLeft(s.current, cutset))
+}
+
+// TrimRight returns a slice of the string s, with all trailing
+// Unicode code points contained in cutset removed.
+func (s String) TrimRight(cutset string) String {
+	return New(strings.TrimRight(s.current, cutset))
+}
+
+// TrimSpace returns a slice of the string s, with all leading
+// and trailing white space removed, as defined by Unicode.
+func (s String) TrimSpace() String {
+	return New(strings.TrimSpace(s.current))
+}
+
+// TrimPrefix returns s without the provided leading prefix string.
+// If s doesn't start with prefix, s is returned unchanged.
+func (s String) TrimPrefix(prefix string) String {
+	return New(strings.TrimPrefix(s.current, prefix))
+}
+
+// TrimSuffix returns s without the provided trailing suffix string.
+// If s doesn't end with suffix, s is returned unchanged.
+func (s String) TrimSuffix(suffix string) String {
+	return New(strings.TrimSuffix(s.current, suffix))
+}
+
 // Title returns a copy of the string s with all Unicode letters that begin words
 // mapped to their title case.
 //
