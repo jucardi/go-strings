@@ -1,9 +1,10 @@
 package stringx
 
 import (
-	"github.com/stretchr/testify/assert"
 	"strings"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
 func TestString_Replace(t *testing.T) {
