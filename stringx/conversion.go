@@ -49,7 +49,7 @@ func DashToPascal(s string) string {
 func symbolSeparatedToPascal(s string, separator string) string {
 	var ret string
 
-	for _, v := range strings.Split(s, separator) {
+	for _, v := range strings.Split(strings.ToLower(s), separator) {
 		ret += strings.Title(v)
 	}
 

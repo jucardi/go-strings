@@ -22,7 +22,7 @@ func TestDashToCamel(t *testing.T) {
 }
 
 func TestSnakeToCamel(t *testing.T) {
-	converted := SnakeToCamel("something_snake_case")
+	converted := SnakeToCamel("SOMETHING_SNAKE_CASE")
 	assert.Equal(t, "somethingSnakeCase", converted, "Conversion mismatch")
 }
 
