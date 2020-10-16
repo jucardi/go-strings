@@ -46,6 +46,18 @@ func DashToPascal(s string) string {
 	return symbolSeparatedToPascal(s, "-")
 }
 
+// ToTitle converts the provided space separated string into a title case string, ensuring the string is all lowercase but capitalizing the first letter of every word
+func ToTitle(s string) string {
+	words := New(s).ToLower().Split(" ")
+	for i, v := range words {
+		if len(v) == 0 {
+			continue
+		}
+		words[i] = strings.ToUpper(v[:1]) + v[1:]
+	}
+	return strings.Join(words, " ")
+}
+
 func symbolSeparatedToPascal(s string, separator string) string {
 	var ret string
 

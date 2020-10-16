@@ -45,3 +45,9 @@ func TestSnakeToPascal(t *testing.T) {
 	converted := SnakeToPascal("something_snake_case")
 	assert.Equal(t, "SomethingSnakeCase", converted, "Conversion mismatch")
 }
+
+func TestToTitle(t *testing.T) {
+	val := "NeQue pOrro quISquMm est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
+	exp := "Neque Porro Quisqumm Est Qui Dolorem Ipsum Quia Dolor Sit Amet, Consectetur, Adipisci Velit..."
+	assert.Equal(t, exp, ToTitle(val))
+}
