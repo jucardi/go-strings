@@ -9,12 +9,6 @@ To keep up to date with the most recent version:
 go get github.com/jucardi/go-strings
 ```
 
-To get a specific version:
-
-```bash
-go get gopkg.in/jucardi/go-strings.v1
-```
-
 ### String Builder
 
 The string builder allows to easily build strings using a byte.buffer underneath.
